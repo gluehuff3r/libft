@@ -14,20 +14,39 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	while (n)
+	size_t			i;
+	unsigned char	*d;
+	const unsigned char	*s;
+
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+    i = 0;
+	if (d < s) // copy forwards
 	{
-		n--;
-		*(unsigned char *)(dest + n) = *(unsigned char *)(src + n);
+		while (i < n)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	else if (d > s) // backward
+	{
+		i = n;
+		while (i > 0)
+		{
+			i--;
+			d[i] = s[i];
+		}
 	}
 	return (dest);
 }
-/*
-int	main(void)
+/*int	main(void)
 {
-	char str1[59] = "whatever";
-	char str2[50] = "whatever";
-
-	printf("%s\n%s", str1,str2);
+	char a1[20] = "abcdef";
+	char a2[20] = "abcdef";
 
 
+	ft_memmove(a1, a1 + 2, 3); 
+	memmove(a2, a2 + 2, 3);
+	printf("%s\n%S", a1, a2);
 }*/

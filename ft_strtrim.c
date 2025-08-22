@@ -57,7 +57,10 @@ char *ft_strtrim(char const *s1, char const *set)
         return NULL;
     start = find_start(s1, set);
     end = find_end(s1, set);
-    str = malloc(strlen(s1) + 1);
+    if (start > end) 
+        return strdup("");
+
+    str = malloc(end - start + 2);
     if (!str)
         return NULL;
 
@@ -65,14 +68,15 @@ char *ft_strtrim(char const *s1, char const *set)
     while (start <= end)
         str[j++] = s1[start++];
     str[j] = '\0';
-    return (str);
+    return str;
 }
+
 
 // Test main
 int main(void)
 {
-    char *s1 = "  abc";
-    char *set = " abc";
+    char *s1 = "abcqwrcbaq";
+    char *set = "abc";
     char *x = ft_strtrim(s1, set);
     printf("%s\n", x);
     free(x);

@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 22:04:56 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/12 17:14:22 by haabu-sa         ###   ########.fr       */
+/*   Created: 2025/08/23 18:13:59 by haabu-sa          #+#    #+#             */
+/*   Updated: 2025/08/23 18:42:06 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*p;
-	int		i;
+	int	i;
 
-	p = malloc(nmemb * size);
 	i = 0;
-	if (p == NULL)
-		return (NULL);
-	ft_memset((char *)(p + i), '\0', nmemb * size);
-	return (p);
+	while (s[i])
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
+	write(fd, "\n", 1);
 }
-/*int	main(void)
-{
-	char *ptr = ft_calloc(10 ,sizeof(char));
-	char	*ptr1 = calloc(10,sizeof(char));
 
-	printf("%s\n",ptr1);
-	printf("%s\n",ptr);
-
-	free(ptr1);
-	free(ptr);
-
-}*/
+// int main(void)
+// {
+// 	char x[50] = "abc";
+// 	ft_putendl_fd(x, 1);
+// }

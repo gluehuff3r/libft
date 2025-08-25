@@ -6,7 +6,7 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:48:31 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/12 22:03:11 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/16 14:28:23 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t	i;
 	size_t	src_len;
 
-	src_len = ft_strlen(src);
+	src_len = ft_strlen((char *)src);
 	if (size == 0)
 		return (src_len);
 	i = 0;

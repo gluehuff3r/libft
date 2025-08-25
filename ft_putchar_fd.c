@@ -1,38 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/11 22:04:56 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/12 17:14:22 by haabu-sa         ###   ########.fr       */
+/*   Created: 2025/08/23 16:49:34 by haabu-sa          #+#    #+#             */
+/*   Updated: 2025/08/23 17:13:26 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*p;
-	int		i;
-
-	p = malloc(nmemb * size);
-	i = 0;
-	if (p == NULL)
-		return (NULL);
-	ft_memset((char *)(p + i), '\0', nmemb * size);
-	return (p);
+	write(fd, &c, 1);
 }
-/*int	main(void)
-{
-	char *ptr = ft_calloc(10 ,sizeof(char));
-	char	*ptr1 = calloc(10,sizeof(char));
-
-	printf("%s\n",ptr1);
-	printf("%s\n",ptr);
-
-	free(ptr1);
-	free(ptr);
-
-}*/
+// int main(void)
+// {
+// 	ft_putchar_fd('A', 1);
+// }

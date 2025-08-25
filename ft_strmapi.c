@@ -1,41 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 17:14:45 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/16 17:14:14 by haabu-sa         ###   ########.fr       */
+/*   Created: 2025/08/23 15:50:38 by haabu-sa          #+#    #+#             */
+/*   Updated: 2025/08/23 18:42:42 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
-{
-	char	*str;
-	size_t	i;
+// char uppper_f(unsigned int i, char c)
+// {
+// 	(void) i;
+//    if (c >= 97 && c <= 122)
+// 	{
+// 		c = c - 32;
+// 	}
+//     return (c);
+// }
 
-	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char			*str;
+	unsigned int	i;
+
+	if (!s)
+		return (NULL);
+	str = malloc(ft_strlen(s) + 1);
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < ft_strlen(s))
+	while (s[i])
 	{
-		str[i] = s[i];
+		str[i] = f(i, s[i]);
 		i++;
 	}
 	str[i] = '\0';
 	return (str);
 }
-
-/*int main()
-{
-char	*s  = "adhnwserkl;hjm;sdflh;sdfjmhgwehwesr";
-char	ss[50] = "adhnwserkl;hjm;sdflh;sdfjmhgwehwesr";
-char	*x = ft_strdup(s);
-char	*z = strdup(ss);
-printf("%s\n%s",s,ss);
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	char *x = ft_strmapi("\0",uppper_f);
+// 	printf("%s\n",x);
+// 	free(x);
+// }

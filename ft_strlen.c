@@ -6,7 +6,7 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 09:03:42 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/10 01:30:28 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/16 14:31:21 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 
 //#include <string.h>
-size_t	ft_strlen(char *s)
+size_t	ft_strlen(const char *s)
 {
 	int	l;
 

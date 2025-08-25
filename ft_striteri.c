@@ -1,40 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/10 02:25:57 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/25 17:53:27 by haabu-sa         ###   ########.fr       */
+/*   Created: 2025/08/23 16:22:55 by haabu-sa          #+#    #+#             */
+/*   Updated: 2025/08/23 21:59:27 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+// void uppper_f(unsigned int i, char *c)
+// {
+//    if (c[i] >= 97 && c[i] <= 122)
+// 	{
+// 		c[i] = c[i] - 32;
+// 	}
+//     //return (c[i]);
+// }
+// void my_fun(unsigned int i, char *c)
+// {
+//     *c = *c + i;
+// }
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1[i] == s2[i] && i < n - 1)
+	if (!s || !f)
+		return ;
+	while (s[i])
 	{
-		if (s1[i] == '\0')
-		{
-			return (0);
-		}
+		f(i, &s[i]);
 		i++;
 	}
-	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
-
 // int	main(void)
 // {
-// // 	char	c[] = "$'\201'";
-// // 	char	ch[] = "A";
-// 	int		i = ft_strncmp(c, ch, 3);
-// 	int		ii = strncmp(c,ch,3);
-// 	printf("%d\n%d", i,ii);
+// 	char s[50] = "abcd0";
+// 	ft_striteri(s,my_fun);
+// 	printf("%s\n",s);
+// 	//free(x);
 // }

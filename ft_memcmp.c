@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/10 19:28:54 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/12 17:38:17 by haabu-sa         ###   ########.fr       */
+/*   Created: 2025/08/25 17:52:39 by haabu-sa          #+#    #+#             */
+/*   Updated: 2025/08/25 18:00:12 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,16 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
+	unsigned char	*s1tmp;
+	unsigned char	*s2tmp;
 
-	i = 0;
 	if (n == 0)
 		return (0);
-	while (*(unsigned char *)(s1 + i) == *(unsigned char *)(s2 + i) && i < n
-		- 1)
-	{
-		if (*(unsigned char *)(s1 + 1) == '\0')
-		{
-			return (0);
-		}
+	s1tmp = (unsigned char *)s1;
+	s2tmp = (unsigned char *)s2;
+	i = 0;
+	while (i < n - 1 && s1tmp[i] == s2tmp[i])
 		i++;
-	}
-	return (*(unsigned char *)(s1 + i) - *(unsigned char *)(s2 + i));
+	return (s1tmp[i] - s2tmp[i]);
 }
-/*int	main(void)
-{
-	char c[] = "zaza";
-	char ch[] = "zaza";
-	int i = ft_memcmp(c, ch, 3);
-	int ii = memcmp(c, ch, 3);
-	printf("%d\n%d", i, ii);
-}*/

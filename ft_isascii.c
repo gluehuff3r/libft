@@ -6,11 +6,12 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 08:25:28 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/07 13:24:11 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:10:11 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

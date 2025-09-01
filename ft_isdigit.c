@@ -6,11 +6,12 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 08:09:28 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/10 00:00:38 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:10:23 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
+
 int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)

@@ -6,7 +6,7 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 14:41:01 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/20 19:39:57 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/31 16:58:43 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
-	char *d;
-	const char *s;
+	size_t				i;
+	const unsigned char	*s;
+	unsigned char		*d;
 
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	i = 0;
-	d = dest;
-	s = src;
 	while (i < n)
 	{
 		d[i] = s[i];
@@ -28,11 +28,14 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-/*
-int	main(void)
-{
-	char str1[50];
-	char str2[60];
-	ft_memcpy(str2, str1, 999);
-	printf("%s\n%s", str1, str2);
-}*/
+
+// int	main(void)
+// {
+// 	char s[50] = "zaza";
+// 	char d[60];
+// 		char s1[50] = "zaza";
+// 	char d1[60];
+// 	char *x = ft_memcpy(d, s, 6);
+// 	char *y = memcpy(d1,s1,6);
+// 	printf("%s\n%s",x,y);
+// }

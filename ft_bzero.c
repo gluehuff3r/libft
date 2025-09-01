@@ -6,11 +6,11 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 13:57:29 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/12 16:45:37 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:09:33 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -6,13 +6,13 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 18:22:19 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/25 16:42:55 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/26 20:46:55 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	len(int n)
+static int	len(int n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	len(int n)
 	return (i);
 }
 
-void	fill_str(int n, char *str, int i)
+static void	fill_str(int n, char *str, int i)
 {
 	while (n > 0)
 	{

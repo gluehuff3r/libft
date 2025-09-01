@@ -6,7 +6,7 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 17:27:42 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/25 17:10:37 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/26 18:14:16 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ char	*ft_strchr(const char *s, int c)
 
 // int main()
 // {
-// 	// char *s = "h124ashaen\0hadebnha";
-// 	// int i = '\0';
-// 	// 	char *ss = "h124ashaen\00hadebnha";
-// 	// 	int ii = '\0';
-// 	char *x = ft_strchr("\0" , 0);
-// 		char  *z = strchr("\0",0);
+// 	char *s = "zaza";
+// 	int i = 'a';
+// 		char *ss = "zaza";
+// 		int ii = 'a';
+// 	char *x = ft_strchr(s, i);
+// 		char  *z = strchr(ss,ii);
 // 	printf("%s\n" , x);
 // 	printf("%s\n" , z);
 

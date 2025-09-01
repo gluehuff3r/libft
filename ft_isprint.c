@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haabu-sa <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 08:55:46 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/05 09:01:24 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:10:47 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include<stdio.h>
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)

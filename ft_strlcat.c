@@ -6,14 +6,12 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 13:23:41 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/09 19:29:08 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:16:18 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-//#include <stdlib.h>
-//#include <string.h>
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dst_len;

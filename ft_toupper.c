@@ -6,13 +6,12 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 16:19:52 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/09 19:26:31 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/08/26 17:17:21 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <ctype.h>
-//#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
+
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)

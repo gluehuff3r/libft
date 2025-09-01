@@ -6,7 +6,7 @@
 /*   By: haabu-sa <haabu-sa@amman.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 20:46:15 by haabu-sa          #+#    #+#             */
-/*   Updated: 2025/08/25 16:43:22 by haabu-sa         ###   ########.fr       */
+/*   Updated: 2025/09/01 19:28:20 by haabu-sa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);	
 void	ft_putnbr_fd(int n, int fd);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	ft_putstr_fd(char *s, int fd);
 
 #endif
